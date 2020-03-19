@@ -8,15 +8,30 @@ VAR
 	vgc_reader : FB_TVGC_ADS;
 	gcc_reader : FB_TGCC_ADS;
 	
+	ADS_connection_counter : UDINT;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// A counter to confirm that the program is running
-counter_x := counter_x + 1; ]]></ST>
+counter_x := counter_x + 1;
+
+gcc_reader(
+	sNetId := '5.54.18..118.1.1',
+	nPort := 851,
+	sVarName := 'test_gcc',
+	iWatchdog := ADS_connection_counter
+);
+	]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="11" Count="0" />
       <LineId Id="2" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="20" Count="1" />
+      <LineId Id="23" Count="2" />
+      <LineId Id="19" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
