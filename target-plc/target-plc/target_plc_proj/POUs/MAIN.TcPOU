@@ -2,6 +2,9 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="MAIN" Id="{01182312-da8c-444b-9322-7734ec958f62}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
+
+// This is the PLC that has values read from it by another PLC.
+
 VAR
 	counter_x : INT := 0;
 	
@@ -21,9 +24,9 @@ counter_x := counter_x + 1;
 
 
 ads_watch_dog(
-	sNetId := '172.21.148.145.1.1',
-	nPort := 851,
-	sVarName := 'MAIN.ADS_connection_counter',
+	sNetId := '172.21.148.145.1.1', // AMS NET ID of the PLC reading from this PLC
+	nPort := 851, // ADS port of the PLC reading from this PLC
+	sVarName := 'MAIN.ADS_connection_counter', // Full name of the UDINT provided to the 'iWatchdog' parameter in the interface functions on the PLC reading from this PLC 
 );]]></ST>
     </Implementation>
     <LineIds Name="MAIN">

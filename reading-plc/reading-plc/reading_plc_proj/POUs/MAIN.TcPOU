@@ -2,12 +2,16 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="MAIN" Id="{445c6c3e-5f54-4453-b203-c04c9319e6f6}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
+
+// This is the PLC that reads values from the other PLC.
+
 VAR
 	counter_x : INT;
 	
 	vgc_reader : FB_TVGC_ADS;
 	gcc_reader : FB_TGCC_ADS;
 	
+	// This variable needs to be instantiated for the Watchdog to work
 	ADS_connection_counter : UDINT;
 	
 END_VAR
@@ -17,17 +21,17 @@ END_VAR
 counter_x := counter_x + 1;
 
 vgc_reader(
-	sNetId := '5.54.18.118.1.1',
-	nPort := 851,
-	sVarName := 'MAIN.test_vgc',
-	iWatchdog := ADS_connection_counter
+	sNetId := '5.54.18.118.1.1', // AMS NET ID of PLC being read from
+	nPort := 851, // ADS port of the PLC reading from this PLC
+	sVarName := 'MAIN.test_vgc', // Full name of the FB containing the valve to be read
+	iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
 );
 
 gcc_reader(
-	sNetId := '5.54.18.118.1.1',
-	nPort := 851,
-	sVarName := 'MAIN.test_gcc',
-	iWatchdog := ADS_connection_counter
+	sNetId := '5.54.18.118.1.1', // AMS NET ID of PLC being read from
+	nPort := 851, // ADS port of the PLC reading from this PLC
+	sVarName := 'MAIN.test_gcc', // Full name of the FB containing the gauge to be read
+	iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
 );
 
 
