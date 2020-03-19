@@ -15,9 +15,9 @@ END_VAR
       <ST><![CDATA[// A counter to confirm that the program is running
 counter_x := counter_x + 1;
 
-
-//test_gcc();
-//test_vgc();
+// These aren't necessary for the test
+// test_gcc(); 
+// test_vgc();
 
 
 ads_watch_dog(
