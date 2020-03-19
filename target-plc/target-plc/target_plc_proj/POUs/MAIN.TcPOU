@@ -13,11 +13,8 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// A counter to confirm that the program is running
-IF counter_x < 1000 THEN
-	counter_x := counter_x + 1;
-ELSE
-	counter_x := 0;
-END_IF
+counter_x := counter_x + 1;
+
 
 //test_gcc();
 //test_vgc();
@@ -32,7 +29,8 @@ ads_watch_dog(
 *)]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="6" Count="4" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="8" Count="0" />
       <LineId Id="2" Count="0" />
       <LineId Id="18" Count="10" />
       <LineId Id="17" Count="0" />

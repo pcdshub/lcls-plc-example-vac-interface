@@ -4,12 +4,18 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	counter_x : INT;
+	
+	vgc_reader : FB_TVGC_ADS;
+	gcc_reader : FB_TGCC_ADS;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[counter_x := counter_x + 1; ]]></ST>
+      <ST><![CDATA[// A counter to confirm that the program is running
+counter_x := counter_x + 1; ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
+      <LineId Id="11" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

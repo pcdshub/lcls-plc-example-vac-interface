@@ -32,6 +32,14 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="L2SI Vacuum Library">
+      <DefaultResolution>L2SI Vacuum Library, * (SLAC)</DefaultResolution>
+      <Namespace>L2SI_Vacuum_Library</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="LCLS General">
+      <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
+      <Namespace>LCLS_General</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
