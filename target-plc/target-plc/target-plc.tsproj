@@ -1,6 +1,121 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.4">
-	<Project ProjectGUID="{7EAA2F46-6BC1-4EF4-81E1-D1EAE9C7ABDD}" Target64Bit="true" ShowHideConfigurations="#x106">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
+			<BitSize>2</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000007}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..6] OF BIT</Name>
+			<BitSize>7</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>7</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000008}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BYTE</Name>
+			<BitSize>8</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000003}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..2] OF BIT</Name>
+			<BitSize>3</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>3</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<BitSize>1</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>1</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000004}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..3] OF BIT</Name>
+			<BitSize>4</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-002000000016}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..21] OF BIT</Name>
+			<BitSize>22</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>22</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000001B}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..26] OF BIT</Name>
+			<BitSize>27</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>27</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000001E}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..29] OF BIT</Name>
+			<BitSize>30</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>30</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-00200000001F}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..30] OF BIT</Name>
+			<BitSize>31</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>31</Elements>
+			</ArrayInfo>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ff808080808080808080808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff0000c00000c0ffffffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1001">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000120b0000120b00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ff0000ff0000ff0000ff0000ff0000ff0000ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+		<ImageData Id="1002">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ff00bfffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c080808000bfff00bfff00bfff00bfff00bfffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ff00bfffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Project ProjectGUID="{7EAA2F46-6BC1-4EF4-81E1-D1EAE9C7ABDD}" TargetNetId="5.54.18.118.1.1" ShowHideConfigurations="#x106">
 		<System>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
@@ -9,12 +124,962 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project GUID="{B91A4A1E-F390-4781-9928-BDA5782094B3}" Name="target_plc_proj" PrjFilePath="target_plc_proj\target_plc_proj.plcproj" TmcFilePath="target_plc_proj\target_plc_proj.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+			<Project GUID="{B91A4A1E-F390-4781-9928-BDA5782094B3}" Name="target_plc_proj" PrjFilePath="target_plc_proj\target_plc_proj.plcproj" TmcFilePath="target_plc_proj\target_plc_proj.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="target_plc_proj\target_plc_proj.tmc">
 					<Name>target_plc_proj Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>L2SI_Vacuum_Library.Global_Variables.g_stSystem.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+							<Comment><![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]></Comment>
+							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.test_gcc.i_iPRESS_R</Name>
+							<Comment><![CDATA[ Controls and I/Os]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.test_vgc.i_xOpnLS</Name>
+							<Comment><![CDATA[IO]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.test_vgc.i_xClsLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>MAIN.test_gcc.q_xHV_DIS</Name>
+							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.test_vgc.q_xOPN_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="8">
+						<Name>PlcTask Retains</Name>
+						<Var>
+							<Name>PMPS_GVL.SuccessfulPreemption</Name>
+							<Comment><![CDATA[ Any time BPTM applies a new BP request which is confirmed]]></Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+						<Var>
+							<Name>PMPS_GVL.AccumulatedFF</Name>
+							<Comment><![CDATA[ Any time a FF occurs]]></Comment>
+							<Type>ULINT</Type>
+							<InOut>7</InOut>
+						</Var>
+					</Vars>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
 				</Instance>
 			</Project>
 		</Plc>
+		<Io>
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="5.54.18.118.2.1" RemoteName="Device 1 (EtherCAT)">
+				<Name>Device 1 (EtherCAT)</Name>
+				<AddressInfo>
+					<Ccat>
+						<Address>-41943040</Address>
+						<Offset>131072</Offset>
+						<Size>8192</Size>
+						<BaseAddr>0</BaseAddr>
+						<BusNo>1</BusNo>
+						<SlotNo>0</SlotNo>
+						<VendorId>5612</VendorId>
+						<DeviceId>20480</DeviceId>
+						<Dma>
+							<Address>0</Address>
+							<Offset>4096</Offset>
+							<Size>256</Size>
+							<BaseAddr>2</BaseAddr>
+							<RxChn>0</RxChn>
+							<TxChn>1</TxChn>
+						</Dma>
+						<Identification>
+							<Value>1022134156</Value>
+							<Version>1</Version>
+							<Size>256</Size>
+						</Identification>
+					</Ccat>
+				</AddressInfo>
+				<Image Id="1" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Box Id="1" BoxType="9099">
+					<Name>Term 1 (EK1200)</Name>
+					<ImageId>1000</ImageId>
+					<EtherCAT PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04b02c52" RevisionNo="#x00001388" InfoDataState="false" PortPhys="49" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1200-5000 EtherCAT Power supply (2A E-Bus)" Desc="EK1200" PortABoxInfo="#x00ffffff"/>
+					<Box Id="2" BoxType="9099" BoxFlags="#x00000020">
+						<Name>Term 2 (EL2212)</Name>
+						<ImageId>1001</ImageId>
+						<EtherCAT SlaveType="2" PdiType="#x0405" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="39" FoeType="1" VendorId="#x00000002" ProductCode="#x08a43052" RevisionNo="#x00170000" InfoDataAddr="true" TimeoutMailbox2="2000" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL2212 2Ch. dig. output with overexcitation (24V DC, 2.5A, 10A Peak)" Desc="EL2212" PortABoxInfo="#x01000001">
+							<SyncMan>001080002600010001000000400080008000001026010000</SyncMan>
+							<SyncMan>801080002200010002000000400080008000801022010000</SyncMan>
+							<SyncMan>001104002400010003000000000000000400001124010000</SyncMan>
+							<SyncMan>801204002000010004000000000000000400801220010000</SyncMan>
+							<Fmmu>0000000000000000001100020100000001000000000000000000000000000000</Fmmu>
+							<Fmmu>0000000000000000801200010100000002000000000000000000000000000000</Fmmu>
+							<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
+							<BootStrapData>0010f400f410f400</BootStrapData>
+							<DcMode>53796e6368726f6e00000000000000004672656552756e2f534d2d53796e6368726f6e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<DcMode>444300000000000000000000000000004443206163746976652028436f6e74726f6c6c65722068616e646c6564290000000000000000000000000000000001030000000000000000000000000000000000000000000000000000000000000000</DcMode>
+							<MBoxUserCmdData>004003000c0000000000000003000000000000000000000000000000000000002081f001040000000000170000</MBoxUserCmdData>
+							<MBoxUserCmdData>004003000a00000000000000030010000000000000000000000000000000000020f3100502000000010000</MBoxUserCmdData>
+							<Pdo Name="DOX Status Channel 1" Index="#x1a00" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a05</ExcludePdo>
+								<Entry Name="Status__Ready to activate" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Output active" Index="#x6000" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Tristate active" Index="#x6000" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__PWM active" Index="#x6000" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Warning" Index="#x6000" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6000" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Synchron info data Channel 1" Index="#x1a01" Flags="#x0010">
+								<Entry Name="Info data 1" Index="#x6000" Sub="#x11">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="Info data 2" Index="#x6000" Sub="#x12">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Status Channel 2" Index="#x1a02" Flags="#x0010" SyncMan="3">
+								<ExcludePdo>#x1a06</ExcludePdo>
+								<Entry Name="Status__Ready to activate" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Output active" Index="#x6010" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Tristate active" Index="#x6010" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__PWM active" Index="#x6010" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Warning" Index="#x6010" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6010" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Synchron info data Channel 2" Index="#x1a03" Flags="#x0010">
+								<Entry Name="Info data 1" Index="#x6010" Sub="#x11">
+									<Type>UINT</Type>
+								</Entry>
+								<Entry Name="Info data 2" Index="#x6010" Sub="#x12">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DC Feedback" Index="#x1a04" Flags="#x0010">
+								<ExcludePdo>#x1a07</ExcludePdo>
+								<ExcludePdo>#x1a08</ExcludePdo>
+								<Entry Name="Feedback" Index="#xf600" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Status (MTO) Channel 1" Index="#x1a05" Flags="#x0010">
+								<ExcludePdo>#x1a00</ExcludePdo>
+								<Entry Name="Status__Ready to activate" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__PWM active" Index="#x6000" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Warning" Index="#x6000" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6000" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6000" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Status (MTO) Channel 2" Index="#x1a06" Flags="#x0010">
+								<ExcludePdo>#x1a02</ExcludePdo>
+								<Entry Name="Status__Ready to activate" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__PWM active" Index="#x6010" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Warning" Index="#x6010" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Error" Index="#x6010" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__TxPDO Toggle" Index="#x6010" Sub="#x10">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Inputs Channel 1" Index="#x1a07" Flags="#x0010">
+								<ExcludePdo>#x1a04</ExcludePdo>
+								<Entry Name="Status__Output short circuit" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Output buffer overflow" Index="#x6020" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Output state" Index="#x6020" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Warning" Index="#x6020" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Input cycle counter" Index="#x6020" Sub="#x0f">
+									<Type>BIT2</Type>
+								</Entry>
+								<Entry Name="Status__Output order feedback" Index="#x6020" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Status__Events in output buffer" Index="#x6020" Sub="#x12">
+									<Type>USINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Inputs Channel 2" Index="#x1a08" Flags="#x0010">
+								<ExcludePdo>#x1a04</ExcludePdo>
+								<Entry Name="Status__Output short circuit" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Output buffer overflow" Index="#x6030" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__Output state" Index="#x6030" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Warning" Index="#x6030" Sub="#x07">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Status__">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+								<Entry Name="Status__Input cycle counter" Index="#x6030" Sub="#x0f">
+									<Type>BIT2</Type>
+								</Entry>
+								<Entry Name="Status__Output order feedback" Index="#x6030" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Status__Events in output buffer" Index="#x6030" Sub="#x12">
+									<Type>USINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Control Channel 1" Index="#x1600" InOut="1" Flags="#x0010" SyncMan="2">
+								<ExcludePdo>#x1603</ExcludePdo>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__Output" Index="#x7000" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__Tristate" Index="#x7000" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__PWM" Index="#x7000" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__Reset" Index="#x7000" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Control Channel 2" Index="#x1601" InOut="1" Flags="#x0010" SyncMan="2">
+								<ExcludePdo>#x1604</ExcludePdo>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000001}">ARRAY [0..0] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__Output" Index="#x7010" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__Tristate" Index="#x7010" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__PWM" Index="#x7010" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__Reset" Index="#x7010" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DC Sync" Index="#x1602" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1607</ExcludePdo>
+								<ExcludePdo>#x1608</ExcludePdo>
+								<ExcludePdo>#x1609</ExcludePdo>
+								<ExcludePdo>#x160a</ExcludePdo>
+								<ExcludePdo>#x160b</ExcludePdo>
+								<ExcludePdo>#x160c</ExcludePdo>
+								<ExcludePdo>#x160d</ExcludePdo>
+								<ExcludePdo>#x160e</ExcludePdo>
+								<Entry Name="Activate" Index="#xf700" Sub="#x01">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Start time" Index="#xf700" Sub="#x03">
+									<Type>ULINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Control (MTO) Channel 1" Index="#x1603" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1600</ExcludePdo>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__PWM" Index="#x7000" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__Reset" Index="#x7000" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX Control (MTO) Channel 2" Index="#x1604" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1601</ExcludePdo>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__PWM" Index="#x7010" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000003}">ARRAY [0..2] OF BIT</Type>
+								</Entry>
+								<Entry Name="Control__Reset" Index="#x7010" Sub="#x08">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Control__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX PWM Channel 1" Index="#x1605" InOut="1" Flags="#x0010">
+								<Entry Name="Duty cycle" Index="#x7000" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="PWM Tperiod" Index="#x7000" Sub="#x13">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="DOX PWM Channel 2" Index="#x1606" InOut="1" Flags="#x0010">
+								<Entry Name="Duty cycle" Index="#x7010" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="PWM Tperiod" Index="#x7010" Sub="#x13">
+									<Type>UINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 10x Channel 1" Index="#x1607" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x1608</ExcludePdo>
+								<ExcludePdo>#x1609</ExcludePdo>
+								<ExcludePdo>#x160a</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7021" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7021" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7021" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7021" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7021" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7021" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7021" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 2" Index="#x7021" Sub="#x22">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 3" Index="#x7021" Sub="#x23">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 4" Index="#x7021" Sub="#x24">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 5" Index="#x7021" Sub="#x25">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 6" Index="#x7021" Sub="#x26">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 7" Index="#x7021" Sub="#x27">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 8" Index="#x7021" Sub="#x28">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 9" Index="#x7021" Sub="#x29">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 10" Index="#x7021" Sub="#x2a">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000016}">ARRAY [0..21] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7021" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 2" Index="#x7021" Sub="#x42">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 3" Index="#x7021" Sub="#x43">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 4" Index="#x7021" Sub="#x44">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 5" Index="#x7021" Sub="#x45">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 6" Index="#x7021" Sub="#x46">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 7" Index="#x7021" Sub="#x47">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 8" Index="#x7021" Sub="#x48">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 9" Index="#x7021" Sub="#x49">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 10" Index="#x7021" Sub="#x4a">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 5x Channel 1" Index="#x1608" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x1607</ExcludePdo>
+								<ExcludePdo>#x1609</ExcludePdo>
+								<ExcludePdo>#x160a</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7021" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7021" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7021" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7021" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7021" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7021" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7021" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 2" Index="#x7021" Sub="#x22">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 3" Index="#x7021" Sub="#x23">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 4" Index="#x7021" Sub="#x24">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 5" Index="#x7021" Sub="#x25">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000001B}">ARRAY [0..26] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7021" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 2" Index="#x7021" Sub="#x42">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 3" Index="#x7021" Sub="#x43">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 4" Index="#x7021" Sub="#x44">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 5" Index="#x7021" Sub="#x45">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 2x Channel 1" Index="#x1609" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x1607</ExcludePdo>
+								<ExcludePdo>#x1608</ExcludePdo>
+								<ExcludePdo>#x160a</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7021" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7021" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7021" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7021" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7021" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7021" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7021" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 2" Index="#x7021" Sub="#x22">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000001E}">ARRAY [0..29] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7021" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 2" Index="#x7021" Sub="#x42">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 1x Channel 1" Index="#x160a" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x1607</ExcludePdo>
+								<ExcludePdo>#x1608</ExcludePdo>
+								<ExcludePdo>#x1609</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7021" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7021" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7021" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7021" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7021" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7021" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7021" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000001F}">ARRAY [0..30] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7021" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 10x Channel 2" Index="#x160b" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x160c</ExcludePdo>
+								<ExcludePdo>#x160d</ExcludePdo>
+								<ExcludePdo>#x160e</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7031" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7031" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7031" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7031" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7031" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7031" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7031" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 2" Index="#x7031" Sub="#x22">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 3" Index="#x7031" Sub="#x23">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 4" Index="#x7031" Sub="#x24">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 5" Index="#x7031" Sub="#x25">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 6" Index="#x7031" Sub="#x26">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 7" Index="#x7031" Sub="#x27">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 8" Index="#x7031" Sub="#x28">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 9" Index="#x7031" Sub="#x29">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 10" Index="#x7031" Sub="#x2a">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-002000000016}">ARRAY [0..21] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7031" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 2" Index="#x7031" Sub="#x42">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 3" Index="#x7031" Sub="#x43">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 4" Index="#x7031" Sub="#x44">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 5" Index="#x7031" Sub="#x45">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 6" Index="#x7031" Sub="#x46">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 7" Index="#x7031" Sub="#x47">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 8" Index="#x7031" Sub="#x48">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 9" Index="#x7031" Sub="#x49">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 10" Index="#x7031" Sub="#x4a">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 5x Channel 2" Index="#x160c" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x160b</ExcludePdo>
+								<ExcludePdo>#x160d</ExcludePdo>
+								<ExcludePdo>#x160e</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7031" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7031" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7031" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7031" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7031" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7031" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7031" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 2" Index="#x7031" Sub="#x22">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 3" Index="#x7031" Sub="#x23">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 4" Index="#x7031" Sub="#x24">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 5" Index="#x7031" Sub="#x25">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000001B}">ARRAY [0..26] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7031" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 2" Index="#x7031" Sub="#x42">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 3" Index="#x7031" Sub="#x43">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 4" Index="#x7031" Sub="#x44">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 5" Index="#x7031" Sub="#x45">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 2x Channel 2" Index="#x160d" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x160b</ExcludePdo>
+								<ExcludePdo>#x160c</ExcludePdo>
+								<ExcludePdo>#x160e</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7031" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7031" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7031" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7031" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7031" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7031" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7031" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 2" Index="#x7031" Sub="#x22">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000001E}">ARRAY [0..29] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7031" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+								<Entry Name="Output event time 2" Index="#x7031" Sub="#x42">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="MTO Outputs 1x Channel 2" Index="#x160e" InOut="1" Flags="#x0010">
+								<ExcludePdo>#x1602</ExcludePdo>
+								<ExcludePdo>#x160b</ExcludePdo>
+								<ExcludePdo>#x160c</ExcludePdo>
+								<ExcludePdo>#x160d</ExcludePdo>
+								<Entry Name="Ctrl__Output buffer reset" Index="#x7031" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Manual output state" Index="#x7031" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Force order" Index="#x7031" Sub="#x03">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Enable manual operation" Index="#x7031" Sub="#x04">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000004}">ARRAY [0..3] OF BIT</Type>
+								</Entry>
+								<Entry Name="Ctrl__Output order counter" Index="#x7031" Sub="#x09">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__No of output events" Index="#x7031" Sub="#x11">
+									<Type>USINT</Type>
+								</Entry>
+								<Entry Name="Ctrl__">
+									<Type GUID="{18071995-0000-0000-0000-002000000008}">ARRAY [0..0] OF BYTE</Type>
+								</Entry>
+								<Entry Name="Outputs__Output event state 1" Index="#x7031" Sub="#x21">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry>
+									<Type GUID="{18071995-0000-0000-0000-00200000001F}">ARRAY [0..30] OF BIT</Type>
+								</Entry>
+								<Entry Name="Output event time 1" Index="#x7031" Sub="#x41">
+									<Type>UDINT</Type>
+								</Entry>
+							</Pdo>
+							<CoeProfile ProfileNo="13767561" DisplayName="Ch. 1 - Extended di"/>
+							<CoeProfile ProfileNo="13767561" DisplayName="Ch. 2 - Extended di"/>
+							<CoeProfile ProfileNo="14422921" DisplayName="Ch. 1 - Multi times"/>
+							<CoeProfile ProfileNo="14422921" DisplayName="Ch. 2 - Multi times"/>
+						</EtherCAT>
+					</Box>
+					<Box Id="3" BoxType="9099">
+						<Name>Term 3 (EL1004)</Name>
+						<ImageId>7</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0104" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x03ec3052" RevisionNo="#x00130000" RepeatSupport="true" CheckRevisionNoType="3" PortPhys="51" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL1004 4Ch. Dig. Input 24V, 3ms" Desc="EL1004" PortABoxInfo="#x01000002">
+							<SyncMan>001001000000010004000000000000000100001000010000</SyncMan>
+							<Fmmu>0000000000000000001000010100000002000000000000000000000000000000</Fmmu>
+							<Pdo Name="Channel 1" Index="#x1a00" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6000" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 2" Index="#x1a01" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6010" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 3" Index="#x1a02" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6020" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="Channel 4" Index="#x1a03" Flags="#x0011" SyncMan="0">
+								<Entry Name="Input" Index="#x6030" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+							</Pdo>
+						</EtherCAT>
+					</Box>
+					<Box Id="4" BoxType="9099">
+						<Name>Term 4 (EK1110)</Name>
+						<ImageId>1002</ImageId>
+						<EtherCAT SlaveType="1" PdiType="#x0100" CycleMBoxPollingTime="0" VendorId="#x00000002" ProductCode="#x04562c52" RevisionNo="#x00110000" PortPhys="19" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EK1110 EtherCAT extension" Desc="EK1110" PortABoxInfo="#x01000003"/>
+					</Box>
+				</Box>
+				<EtherCAT/>
+			</Device>
+		</Io>
 	</Project>
 </TcSmProject>
