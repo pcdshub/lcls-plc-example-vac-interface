@@ -1,0 +1,946 @@
+
+Data Types
+----------
+
+
+    
+L2SI_Vacuum_Library.FB_TGCC_ADS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):AT_VAC_RBV
+      - bi
+      - $(SYMBOL).IG.xAT_VAC
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):DISC_ACTIVE_RBV
+      - bi
+      - $(SYMBOL).IG.i_xDisc_Active
+      - | field: ONAM DISC ACTIVE
+        | field: ZNAM NO DISC
+        | io: input
+
+
+    * - $(PREFIX):HV_DIS_DO_RBV
+      - bi
+      - $(SYMBOL).IG.q_xHV_DIS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):HV_ON_RBV
+      - bi
+      - $(SYMBOL).IG.i_xHV_ON
+      - | io: input
+
+
+    * - $(PREFIX):HV_SW
+      - bo
+      - $(SYMBOL).IG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):HV_SW_RBV
+      - bi
+      - $(SYMBOL).IG.xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):ILK_OK_RBV
+      - bi
+      - $(SYMBOL).IG.xILKOk
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - $(PREFIX):PRESS_AI_RBV
+      - longin
+      - $(SYMBOL).IG.i_iPRESS_R
+      - | io: input
+
+
+    * - $(PREFIX):PRESS_OK_RBV
+      - bi
+      - $(SYMBOL).IG.xPRESS_OK
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: input
+
+
+    * - $(PREFIX):PRESS_RBV
+      - ai
+      - $(SYMBOL).IG.rPRESS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):PRO_SP
+      - ao
+      - $(SYMBOL).IG.rPRO_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):PRO_SP_RBV
+      - ai
+      - $(SYMBOL).IG.rPRO_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):SP_HYS
+      - ao
+      - $(SYMBOL).IG.rHYS_PR
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):SP_HYS_RBV
+      - ai
+      - $(SYMBOL).IG.rHYS_PR
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):VAC_SP
+      - ao
+      - $(SYMBOL).IG.rVAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):VAC_SP_RBV
+      - ai
+      - $(SYMBOL).IG.rVAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+ 
+L2SI_Vacuum_Library.FB_TVGC_ADS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):ALM_RST
+      - bo
+      - $(SYMBOL).VGC.pv_xAlmRst
+      - | io: output
+
+
+    * - $(PREFIX):ALM_RST_RBV
+      - bi
+      - $(SYMBOL).VGC.pv_xAlmRst
+      - | io: output
+
+
+    * - $(PREFIX):AT_VAC_HYS
+      - ao
+      - $(SYMBOL).VGC.rAT_VAC_HYS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):AT_VAC_HYS_RBV
+      - ai
+      - $(SYMBOL).VGC.rAT_VAC_HYS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):AT_VAC_RBV
+      - bi
+      - $(SYMBOL).VGC.xAT_VAC
+      - | field: ONAM AT VAC
+        | field: ZNAM NOT AT VAC
+        | io: input
+
+
+    * - $(PREFIX):AT_VAC_SP
+      - ao
+      - $(SYMBOL).VGC.rAT_VAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):AT_VAC_SP_RBV
+      - ai
+      - $(SYMBOL).VGC.rAT_VAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):CLS_DI_RBV
+      - bi
+      - $(SYMBOL).VGC.i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):DP_OK_RBV
+      - bi
+      - $(SYMBOL).VGC.xDP_OK
+      - | field: ONAM DP OK
+        | field: ZNAM DP NOT OK
+        | io: input
+
+
+    * - $(PREFIX):ERR_DifPres
+      - bo
+      - $(SYMBOL).VGC.xERR_DifPres
+      - | field: ONAM Diffrential error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_DifPres_RBV
+      - bi
+      - $(SYMBOL).VGC.xERR_DifPres
+      - | field: ONAM Diffrential error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_Ext
+      - bo
+      - $(SYMBOL).VGC.xERR_ExtFault
+      - | field: ONAM External error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_Ext_RBV
+      - bi
+      - $(SYMBOL).VGC.xERR_ExtFault
+      - | field: ONAM External error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_SP
+      - bo
+      - $(SYMBOL).VGC.xERR_SP
+      - | field: ONAM Setpoint error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_SP_RBV
+      - bi
+      - $(SYMBOL).VGC.xERR_SP
+      - | field: ONAM Setpoint error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ErrMsg
+      - waveform
+      - $(SYMBOL).VGC.sErrorMessage
+      - | io: output
+
+
+    * - $(PREFIX):ErrMsg_RBV
+      - waveform
+      - $(SYMBOL).VGC.sErrorMessage
+      - | io: output
+
+
+    * - $(PREFIX):ERROR
+      - bo
+      - $(SYMBOL).VGC.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERROR_RBV
+      - bi
+      - $(SYMBOL).VGC.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):EXT_ILK_OK_RBV
+      - bi
+      - $(SYMBOL).VGC.xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - $(PREFIX):FORCE_OPN
+      - bo
+      - $(SYMBOL).VGC.pv_xOvrdOpn
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):FORCE_OPN_RBV
+      - bi
+      - $(SYMBOL).VGC.pv_xOvrdOpn
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):HYST_PERC
+      - ao
+      - $(SYMBOL).VGC.rHYST_PERC
+      - | io: output
+
+
+    * - $(PREFIX):HYST_PERC_RBV
+      - ai
+      - $(SYMBOL).VGC.rHYST_PERC
+      - | io: output
+
+
+    * - $(PREFIX):OPN_DI_RBV
+      - bi
+      - $(SYMBOL).VGC.i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):OPN_DO_RBV
+      - bi
+      - $(SYMBOL).VGC.q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):OPN_OK_RBV
+      - bi
+      - $(SYMBOL).VGC.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - $(PREFIX):OPN_SW
+      - bo
+      - $(SYMBOL).VGC.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - $(PREFIX):OPN_SW_RBV
+      - bi
+      - $(SYMBOL).VGC.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - $(PREFIX):OVRD_ON
+      - bo
+      - $(SYMBOL).VGC.xOverrideMode
+      - | field: ONAM Override OFF
+        | field: ZNAM Override ON
+        | io: output
+
+
+    * - $(PREFIX):OVRD_ON_RBV
+      - bi
+      - $(SYMBOL).VGC.xOverrideMode
+      - | field: ONAM Override OFF
+        | field: ZNAM Override ON
+        | io: output
+
+
+    * - $(PREFIX):POS_STATE_RBV
+      - mbbi
+      - $(SYMBOL).VGC.eState
+      - | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - $(PREFIX):STATE_RBV
+      - mbbi
+      - $(SYMBOL).VGC.eVGC_State
+      - | field: FRST Ext Fault
+        | field: ONST At Vacuum
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+ 
+L2SI_Vacuum_Library.PMPS.ST_BeamParams
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):Attenuation_RBV
+      - ai
+      - $(SYMBOL).fAtt
+      - | io: input
+
+
+    * - $(PREFIX):PhotonEnergy_RBV
+      - longin
+      - $(SYMBOL).neVRange
+      - | io: input
+
+
+    * - $(PREFIX):PulseEnergy_RBV
+      - ai
+      - $(SYMBOL).fPP_mJ
+      - | io: input
+
+
+    * - $(PREFIX):Rate_RBV
+      - longin
+      - $(SYMBOL).nRate
+      - | io: input
+
+
+    * - $(PREFIX):Stopper_RBV
+      - waveform
+      - $(SYMBOL).aStoppers
+      - | io: input
+
+
+    * - $(PREFIX):Valid_RBV
+      - bi
+      - $(SYMBOL).xValid
+      - | io: input
+
+
+                                
+L2SI_Vacuum_Library.ST_VG
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):AT_VAC_RBV
+      - bi
+      - $(SYMBOL).xAT_VAC
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):DISC_ACTIVE_RBV
+      - bi
+      - $(SYMBOL).i_xDisc_Active
+      - | field: ONAM DISC ACTIVE
+        | field: ZNAM NO DISC
+        | io: input
+
+
+    * - $(PREFIX):HV_DIS_DO_RBV
+      - bi
+      - $(SYMBOL).q_xHV_DIS
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):HV_ON_RBV
+      - bi
+      - $(SYMBOL).i_xHV_ON
+      - | io: input
+
+
+    * - $(PREFIX):HV_SW
+      - bo
+      - $(SYMBOL).xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):HV_SW_RBV
+      - bi
+      - $(SYMBOL).xHV_SW
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - $(PREFIX):ILK_OK_RBV
+      - bi
+      - $(SYMBOL).xILKOk
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - $(PREFIX):PRESS_AI_RBV
+      - longin
+      - $(SYMBOL).i_iPRESS_R
+      - | io: input
+
+
+    * - $(PREFIX):PRESS_OK_RBV
+      - bi
+      - $(SYMBOL).xPRESS_OK
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: input
+
+
+    * - $(PREFIX):PRESS_RBV
+      - ai
+      - $(SYMBOL).rPRESS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: input
+
+
+    * - $(PREFIX):PRO_SP
+      - ao
+      - $(SYMBOL).rPRO_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):PRO_SP_RBV
+      - ai
+      - $(SYMBOL).rPRO_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):SP_HYS
+      - ao
+      - $(SYMBOL).rHYS_PR
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):SP_HYS_RBV
+      - ai
+      - $(SYMBOL).rHYS_PR
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):VAC_SP
+      - ao
+      - $(SYMBOL).rVAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):VAC_SP_RBV
+      - ai
+      - $(SYMBOL).rVAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+ 
+L2SI_Vacuum_Library.ST_VGC
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX):ALM_RST
+      - bo
+      - $(SYMBOL).pv_xAlmRst
+      - | io: output
+
+
+    * - $(PREFIX):ALM_RST_RBV
+      - bi
+      - $(SYMBOL).pv_xAlmRst
+      - | io: output
+
+
+    * - $(PREFIX):AT_VAC_HYS
+      - ao
+      - $(SYMBOL).rAT_VAC_HYS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):AT_VAC_HYS_RBV
+      - ai
+      - $(SYMBOL).rAT_VAC_HYS
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):AT_VAC_RBV
+      - bi
+      - $(SYMBOL).xAT_VAC
+      - | field: ONAM AT VAC
+        | field: ZNAM NOT AT VAC
+        | io: input
+
+
+    * - $(PREFIX):AT_VAC_SP
+      - ao
+      - $(SYMBOL).rAT_VAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):AT_VAC_SP_RBV
+      - ai
+      - $(SYMBOL).rAT_VAC_SP
+      - | field: EGU "TORR"
+        | field: HOPR 1000
+        | field: LOPR 0
+        | field: PREC 2
+        | io: output
+
+
+    * - $(PREFIX):CLS_DI_RBV
+      - bi
+      - $(SYMBOL).i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):DP_OK_RBV
+      - bi
+      - $(SYMBOL).xDP_OK
+      - | field: ONAM DP OK
+        | field: ZNAM DP NOT OK
+        | io: input
+
+
+    * - $(PREFIX):ERR_DifPres
+      - bo
+      - $(SYMBOL).xERR_DifPres
+      - | field: ONAM Diffrential error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_DifPres_RBV
+      - bi
+      - $(SYMBOL).xERR_DifPres
+      - | field: ONAM Diffrential error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_Ext
+      - bo
+      - $(SYMBOL).xERR_ExtFault
+      - | field: ONAM External error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_Ext_RBV
+      - bi
+      - $(SYMBOL).xERR_ExtFault
+      - | field: ONAM External error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_SP
+      - bo
+      - $(SYMBOL).xERR_SP
+      - | field: ONAM Setpoint error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERR_SP_RBV
+      - bi
+      - $(SYMBOL).xERR_SP
+      - | field: ONAM Setpoint error present
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ErrMsg
+      - waveform
+      - $(SYMBOL).sErrorMessage
+      - | io: output
+
+
+    * - $(PREFIX):ErrMsg_RBV
+      - waveform
+      - $(SYMBOL).sErrorMessage
+      - | io: output
+
+
+    * - $(PREFIX):ERROR
+      - bo
+      - $(SYMBOL).bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):ERROR_RBV
+      - bi
+      - $(SYMBOL).bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - $(PREFIX):EXT_ILK_OK_RBV
+      - bi
+      - $(SYMBOL).xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - $(PREFIX):FORCE_OPN
+      - bo
+      - $(SYMBOL).pv_xOvrdOpn
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):FORCE_OPN_RBV
+      - bi
+      - $(SYMBOL).pv_xOvrdOpn
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - $(PREFIX):HYST_PERC
+      - ao
+      - $(SYMBOL).rHYST_PERC
+      - | io: output
+
+
+    * - $(PREFIX):HYST_PERC_RBV
+      - ai
+      - $(SYMBOL).rHYST_PERC
+      - | io: output
+
+
+    * - $(PREFIX):OPN_DI_RBV
+      - bi
+      - $(SYMBOL).i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):OPN_DO_RBV
+      - bi
+      - $(SYMBOL).q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - $(PREFIX):OPN_OK_RBV
+      - bi
+      - $(SYMBOL).xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - $(PREFIX):OPN_SW
+      - bo
+      - $(SYMBOL).pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - $(PREFIX):OPN_SW_RBV
+      - bi
+      - $(SYMBOL).pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - $(PREFIX):OVRD_ON
+      - bo
+      - $(SYMBOL).xOverrideMode
+      - | field: ONAM Override OFF
+        | field: ZNAM Override ON
+        | io: output
+
+
+    * - $(PREFIX):OVRD_ON_RBV
+      - bi
+      - $(SYMBOL).xOverrideMode
+      - | field: ONAM Override OFF
+        | field: ZNAM Override ON
+        | io: output
+
+
+    * - $(PREFIX):POS_STATE_RBV
+      - mbbi
+      - $(SYMBOL).eState
+      - | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - $(PREFIX):STATE_RBV
+      - mbbi
+      - $(SYMBOL).eVGC_State
+      - | field: FRST Ext Fault
+        | field: ONST At Vacuum
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+                                        
+Database Records
+----------------
+
+.. list-table::
+    :header-rows: 1
+    :align: center
+
+    * - Record
+      - Type
+      - Description
+      - Pragma
+    * - $(PREFIX)LCLSGeneral:LogHost_RBV
+      - waveform
+      - The log host IP address
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogHost
+      - waveform
+      - The log host IP address
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogPort_RBV
+      - longin
+      - The log host UDP port
+      - | io: output
+
+
+    * - $(PREFIX)LCLSGeneral:LogPort
+      - longout
+      - The log host UDP port
+      - | io: output
+
+
+

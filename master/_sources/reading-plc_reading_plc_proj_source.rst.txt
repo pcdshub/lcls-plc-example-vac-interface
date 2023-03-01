@@ -1,0 +1,54 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+POUs
+----
+
+
+MAIN
+^^^^
+
+::
+
+    PROGRAM MAIN
+
+    // This is the PLC that reads values from the other PLC.
+
+    VAR
+    	counter_x : INT;
+    	
+    	vgc_reader : FB_TVGC_ADS;
+    	gcc_reader : FB_TGCC_ADS;
+    	
+    	// This variable needs to be instantiated for the Watchdog to work
+    	ADS_connection_counter : UDINT;
+    	
+    END_VAR
+    // A counter to confirm that the program is running
+    counter_x := counter_x + 1;
+
+    vgc_reader(
+    	sNetId := '5.54.18.118.1.1', // AMS NET ID of PLC being read from
+    	nPort := 851, // ADS port of the PLC reading from this PLC
+    	sVarName := 'MAIN.test_vgc', // Full name of the FB containing the valve to be read
+    	iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
+    );
+
+    gcc_reader(
+    	sNetId := '5.54.18.118.1.1', // AMS NET ID of PLC being read from
+    	nPort := 851, // ADS port of the PLC reading from this PLC
+    	sVarName := 'MAIN.test_gcc', // Full name of the FB containing the gauge to be read
+    	iWatchdog := ADS_connection_counter // UDINT required for watchdog functionality
+    );
+
+    END_PROGRAM
+
+
+

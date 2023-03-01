@@ -1,0 +1,49 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+POUs
+----
+
+
+MAIN
+^^^^
+
+::
+
+    PROGRAM MAIN
+
+    // This is the PLC that has values read from it by another PLC.
+
+    VAR
+    	counter_x : INT := 0;
+    	
+    	test_gcc : FB_MKS422;
+    	test_vgc : FB_VGC;
+    	
+    	ads_watch_dog : FB_ADS_WATCHDOG;
+    END_VAR
+    // A counter to confirm that the program is running
+    counter_x := counter_x + 1;
+
+    // These aren't necessary for the test
+    // test_gcc(); 
+    // test_vgc();
+
+
+    ads_watch_dog(
+    	sNetId := '172.21.148.145.1.1', // AMS NET ID of the PLC reading from this PLC
+    	nPort := 851, // ADS port of the PLC reading from this PLC
+    	sVarName := 'MAIN.ADS_connection_counter', // Full name of the UDINT provided to the 'iWatchdog' parameter in the interface functions on the PLC reading from this PLC 
+    );
+
+    END_PROGRAM
+
+
+

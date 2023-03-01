@@ -1,0 +1,30 @@
+target-plc
+----------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: target-plc
+
+    target-plc_pragmas
+    target-plc_nc
+    target-plc_ethercat
+    target-plc_boxes
+    target-plc_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: target_plc_proj
+
+    target-plc_target_plc_proj_summary
+    target-plc_target_plc_proj_epics
+    target-plc_target_plc_proj_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
