@@ -1,4 +1,5 @@
-# L2SI-Vac-ADS-interface-example
+# lcls-plc-example-vac-interface
+
 This repository is a working example of the ADS interface for gauges in L2SI-Vacuum-Lib (https://github.com/pcdshub/lcls-twincat-vacuum). In the interest of keeping this example simple, the communication is unidirectional. 
 
 ## Terms 
